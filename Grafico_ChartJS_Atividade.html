@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"
+        integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A=="
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <canvas class="line-chart"></canvas>
+</body>
+
+</html>
+<script>
+    var ctx = document.getElementsByClassName("line-chart");
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['10h', '11h', '12h', '13h', '14h', '15h', '16h'],
+            datasets: [{
+                label: "Temperatura",
+                data: [35,37,38,39,38,37,35],
+                borderWidht: 6,
+                borderColor: 'rgba(77,166,253,0.85)',
+                backgroundColor: 'transparent',
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Relatório de temperatura do paciente"
+            },
+            labels: {
+                fontStyle: "bold",
+               
+            }
+        
+        }
+    });
+</script>
+
